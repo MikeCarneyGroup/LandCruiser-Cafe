@@ -9,51 +9,108 @@
       font-family: Arial, sans-serif;
       text-align: center;
       background-color: #f2f2f2;
+      color: hsl(0, 0%, 20%);
     }
 
     #container {
-      max-width: 40em;
+      max-width: 60em;
       margin: auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .logo {
-      width: 500px;
+      max-width: 100%;
+      height: auto;
     }
 
-    h1 {
+    h1, h2 {
       color: #5c5c5c;
     }
 
     p {
-      font-size: 16px;
+      color: #666;
+      margin: 10px 0 20px;
+    }
+
+    main {
+      text-align: left;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    strong {
+      display: block;
+      margin: 20px 0 10px;
+      color: #333;
+      font-size: 20px;
+    }
+
+    .label-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 10px;
+      text-align: center;
       color: #5c5c5c;
-      margin: 20px;
+      margin-bottom: 20px;
     }
 
-    h2 {
-      margin-top: 40px;
+    .label-item {
+      flex-basis: 60%; /* Adjust the width of the first cell */
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 20px;
+    .label-item, .label-s, .label-m, .label-l {
+      font-weight: bold; /* Makes the text bold */
+      padding: 5px 0; /* Adds some padding for better spacing */
     }
 
-    li {
-      font-size: 18px;
-      margin: 10px 0;
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 10px;
     }
 
-    ul ul {
-      margin-left: 20px;
+    .item .type {
+      flex-basis: 60%;
     }
 
-    .menu-item-image {
-      width: 100px;
-      height: 100px;
-      border: 1px solid #ccc;
+    .item p {
+      margin: 5px 0; /* Tighter spacing for items */
+      flex: 1;
+      text-align: center;
+    }
+
+    .price-s, .price-m, .price-l, .price {
       background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #999;
+    }
+    
+    .footer a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .item .type {
+        flex-basis: 50%;
+      }
     }
   </style>
   <!-- Google tag (gtag.js) -->
@@ -77,54 +134,198 @@
     <p>We offer free barista-made coffee to guests who book a service with <a
         href="https://www.mikecarneytoyota.com.au/">Mike Carney Toyota</a>.</p>
     <h2>Menu</h2>
-    <ul>
-      <li>
-        <img src="images/LandCrusier-Cafe-coffee.png" alt="Coffee" class="menu-item-image">
-        <br>
+    <main>
+      <div class="label-container">
+        <p class="label-item"></p>
+        <p class="label-s">S</p>
+        <p class="label-m">M</p>
+        <p class="label-l">L</p>
+      </div>
+      <section>
         <strong>Coffee</strong>
-        <ul>
-          <li>Hot White</li>
-          <li>Cappuccino</li>
-          <li>Latte</li>
-          <li>Vanilla Chai Latte</li>
-          <li>Mocha</li>
-          <li>Iced Latte</li>
-          <li>Iced Mocha</li>
-          <li>American</li>
-          <li>Espresso</li>
-        </ul>
-      </li>
-      <li>
-        <img src="images/LandCrusier-Cafe-tea.png" alt="Tea" class="menu-item-image">
-        <br>
+        <article class="item">
+          <p class="type">Espresso</p>
+          <p class="price-s">$2.50</p>
+          <p class="price-m"></p>
+          <p class="price-l"></p>
+        </article>
+        <article class="item">
+          <p class="type">Double Espresso</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m"></p>
+          <p class="price-l"></p>
+        </article>
+        <article class="item">
+          <p class="type">Americano</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m"></p>
+          <p class="price-l"></p>
+        </article>
+        <article class="item">
+          <p class="type">Macchiato</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m"></p>
+          <p class="price-l"></p>
+        </article>
+        <article class="item">
+          <p class="type">Piccolo Latte</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m"></p>
+          <p class="price-l"></p>
+        </article>
+        <article class="item">
+          <p class="type">Flat White</p>
+          <p class="price-s">$3.50</p>
+          <p class="price-m">$4.00</p>
+          <p class="price-l">$5.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Cappuccino</p>
+          <p class="price-s">$3.50</p>
+          <p class="price-m">$4.00</p>
+          <p class="price-l">$5.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Latte</p>
+          <p class="price-s">$3.50</p>
+          <p class="price-m">$4.50</p>
+          <p class="price-l">$5.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Mocha (HOT white chocolate/ chocolate/ peppermint)</p>
+          <p class="price-s">$3.50</p>
+          <p class="price-m">$4.50</p>
+          <p class="price-l">$5.50</p>
+        </article>
+        <article class="item">
+          <p class="type">Chai Latte (Spiced\vanilla\dirty)</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m">$4.00</p>
+          <p class="price-l">$5.00</p>
+        </article>
+      </section>
+      <section>
+        <strong>Chilled</strong>
+        <article class="item">
+          <p class="type">Iced Americano</p>
+          <p class="price-s"></p>
+          <p class="price-m">$3.00</p>
+          <p class="price-l">$4.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Iced Chaitea (spiced/vanilla)</p>
+          <p class="price-s"></p>
+          <p class="price-m">$4.00</p>
+          <p class="price-l">$5.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Iced Latte</p>
+          <p class="price-s"></p>
+          <p class="price-m">$4.00</p>
+          <p class="price-l">$5.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Iced Mocha (white chocolate/ chocolate/ peppermint syrups 50c extra)</p>
+          <p class="price-s"></p>
+          <p class="price-m">$4.00</p>
+          <p class="price-l">$5.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Iced Long Black</p>
+          <p class="price-s"></p>
+          <p class="price-m">$4.00</p>
+          <p class="price-l">$5.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Iced Chocolate (white chocolate & peppermint syrup 50c extra)</p>
+          <p class="price-s"></p>
+          <p class="price-m">$4.00</p>
+          <p class="price-l">$5.00</p>
+        </article>
+      </section>
+      <section>
         <strong>Tea</strong>
-        <ul>
-          <li>Black</li>
-          <li>Green</li>
-          <li>Herbal</li>
-          <li>Chai</li>
-          <li>Iced</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Other</strong>
-        <ul>
-          <li>Hot Chocolate</li>
-          <li>Babycino</li>
-          <li>Iced Chocolate</li>
-        </ul>
-      </li>
-      <li>
-        <strong>Milk Options</strong>
-        <ul>
-          <li>Full Cream</li>
-          <li>Lactose-free</li>
-          <li>Oat</li>
-          <li>Soy</li>
-          <li>Almond</li>
-        </ul>
-      </li>
-    </ul>
+        <article class="item">
+          <p class="type">Green</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m">$3.50</p>
+          <p class="price-l">$4.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Cammomile</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m">$3.50</p>
+          <p class="price-l">$4.00</p>
+        </article>
+        <article class="item">
+          <p class="type">English Breakfast</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m">$3.50</p>
+          <p class="price-l">$4.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Earl Grey</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m">$3.50</p>
+          <p class="price-l">$4.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Peppermint</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m">$3.50</p>
+          <p class="price-l">$4.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Lemon and Ginger</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m">$3.50</p>
+          <p class="price-l">$4.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Blackcurrent and Blueberry</p>
+          <p class="price-s">$3.00</p>
+          <p class="price-m">$3.50</p>
+          <p class="price-l">$4.00</p>
+        </article>
+      </section>
+      <p>Extra shot & Syrups available: White Chocolate, Vanilla, Caramel, Hazelnut, Peppermint for 50c Extra.</p>
+      <p>Milk: Full cream, Skim, Lactose Free, Almond, Soy & Oat.</p>
+      <section>
+        <strong>Food</strong>
+        <article class="item">
+          <p class="type">Caramel Slice</p>
+          <p class="price">$1.50</p>
+        </article>
+        <article class="item">
+          <p class="type">Lemon Slice</p>
+          <p class="price">$1.50</p>
+        </article>
+        <article class="item">
+          <p class="type">Banana Bread</p>
+          <p class="price">$2.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Mud Cake Slice</p>
+          <p class="price">$2.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Date & Walnut Slice</p>
+          <p class="price">$2.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Chocolate Chip Jumbo Cookie</p>
+          <p class="price">$3.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Melting Moment Jumbo Cookie</p>
+          <p class="price">$3.00</p>
+        </article>
+        <article class="item">
+          <p class="type">Brownie</p>
+          <p class="price">$3.00</p>
+        </article>
+      </section>
+    </main>
     <div class="footer">
       <h2>Contact</h2>
       <div id="map"></div>
@@ -133,6 +334,7 @@
         <a href="https://www.instagram.com/landcruiser.cafe">Instagram</a>
       </div>
       <div>
+        <strong>Opening Hours</strong><br>
         Monday: 07:00-13:30<br>
         Tuesday: 07:00-13:30<br>
         Wednesday: 07:00-13:30<br>
